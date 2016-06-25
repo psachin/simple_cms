@@ -1,0 +1,35 @@
+<h1>Demo#hello</h1>
+<p>Hello world</p>
+
+<%= 1 + 1 %>
+
+<br />
+<br />
+
+<% target = "world" %>
+<%= "Hello #{target}" %>
+
+
+<% 3.times do %>
+<% puts "hello "%>
+<% end %>
+
+<br />
+
+<% @array.each do |n| %>
+<%= n %><br />
+<% end %>
+
+
+<%= link_to("lynda", "http://linda.com") %>
+
+<%= link_to("test", "/demo/test") %> <br />
+
+ID: <%= params[:id] %> <br />
+ID: <%= @id %> <br />
+Page: <%= @page %> <br />
+Next Page: <%= @page + 1 %> <br />
+
+<hr />
+
+<%= params.inspect %>
