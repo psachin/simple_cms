@@ -2,6 +2,8 @@ class AdminUser < ActiveRecord::Base
   # Explicitily specify tablename
   # self.table_name = "admin_users"
 
+  has_and_belongs_to_many :pages
+
   # short_way
   attr_accessor :first_name
 

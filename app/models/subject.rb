@@ -1,5 +1,7 @@
 class Subject < ActiveRecord::Base
 
+  has_many :pages
+
   # sImilar to model manager in Django
   scope :visible, lambda { where(:visible => true)}
   scope :invisible, lambda { where(:visible => false)}

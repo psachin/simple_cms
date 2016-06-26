@@ -1,7 +1,7 @@
 #+TITLE: Ruby On Rails - Models, ActiveRecords, & ActiveRelations
 #+DATE: \today
 #+OPTIONS: texht:t
-#+OPTIONS: toc:nil email:t
+#+OPTIONS: toc:nil email:nil
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS:
 #+LATEX_HEADER_EXTRA:
@@ -182,6 +182,20 @@
          Subject.newest_first
          Subject.search("Math")
        #+END_SRC
+
+** Associations
+   - One-to-one
+     - Classroom =has_one :teacher=
+     - Teacher =belongs_to :classroom=
+
+   - One-to-many
+     - Teacher =has_many :courses=
+     - Course =belongs_to :teacher=
+     - Photographer =has_many :photographs=
+
+   - Many-to-many
+     - Course =has_and_belongs_to_many :students=
+     - Student =has_and_belongs_to_many :courses=
 
 ** Links
    - [[https://www.youtube.com/watch?v%3D-Jdc_WMQ8Ts][Youtube]]
